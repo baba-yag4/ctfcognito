@@ -198,16 +198,26 @@ export default function Home() {
                     <div className="border-t border-border/50"></div>
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Competition</span>
-                      <span className="text-primary font-semibold">10:00 AM - 4:00 PM</span>
+                      <span className="text-primary font-semibold">10:00 AM - 12:00 PM</span>
+                    </div>
+                    <div className="border-t border-border/50"></div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-muted-foreground">Lunch Break</span>
+                      <span className="text-foreground font-medium">12:00 PM - 1:00 PM</span>
+                    </div>
+                    <div className="border-t border-border/50"></div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-muted-foreground">Competition</span>
+                      <span className="text-primary font-semibold">1:00 PM - 4:00 PM</span>
                     </div>
                     <div className="border-t border-border/50"></div>
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Results</span>
-                      <span className="text-foreground font-medium">4:30 PM - 5:00 PM</span>
+                      <span className="text-foreground font-medium">4:00 PM - 4:30 PM</span>
                     </div>
                   </div>
                   
-                  <p className="text-sm text-muted-foreground text-center">6 Hours of Intense Competition</p>
+                  <p className="text-sm text-muted-foreground text-center">5 Hours of Intense Competition</p>
                 </div>
               </CyberCard>
             </motion.div>
