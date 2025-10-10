@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 
 export default function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -10,43 +9,53 @@ export default function CustomCursor() {
     };
 
     window.addEventListener("mousemove", updateMousePosition);
+    document.body.style.cursor = 'none';
 
     return () => {
       window.removeEventListener("mousemove", updateMousePosition);
+      document.body.style.cursor = 'auto';
     };
   }, []);
 
   return (
-    <>
-      {/* Outer circle */}
-      <motion.div
-        className="fixed top-0 left-0 w-8 h-8 border border-cyan-400/60 rounded-full pointer-events-none z-[9999] hidden md:block"
-        animate={{
-          x: mousePosition.x - 16,
-          y: mousePosition.y - 16,
+    <div 
+      className="fixed pointer-events-none z-[9999] hidden md:block mix-blend-screen"
+      style={{
+        left: `${mousePosition.x}px`,
+        top: `${mousePosition.y}px`,
+        transform: 'translate(0, 0)',
+      }}
+    >
+      {/* Cyan glitch layer - offset left */}
+      <div 
+        className="absolute"
+        style={{
+          transform: 'translate(-2px, -2px)',
         }}
-        transition={{
-          type: "spring",
-          damping: 30,
-          stiffness: 400,
-          mass: 0.5,
-        }}
-      />
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M3 3L8 3L8 8L11 8L11 11L8 11L8 16L3 16L3 3Z" fill="#00ffff" opacity="0.8"/>
+        </svg>
+      </div>
       
-      {/* Center dot */}
-      <motion.div
-        className="fixed top-0 left-0 w-1 h-1 bg-cyan-400 rounded-full pointer-events-none z-[9999] hidden md:block"
-        animate={{
-          x: mousePosition.x - 2,
-          y: mousePosition.y - 2,
+      {/* Magenta glitch layer - offset right */}
+      <div 
+        className="absolute"
+        style={{
+          transform: 'translate(2px, 2px)',
         }}
-        transition={{
-          type: "spring",
-          damping: 20,
-          stiffness: 600,
-          mass: 0.2,
-        }}
-      />
-    </>
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M3 3L8 3L8 8L11 8L11 11L8 11L8 16L3 16L3 3Z" fill="#ff00ff" opacity="0.8"/>
+        </svg>
+      </div>
+      
+      {/* White center layer */}
+      <div className="absolute">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M3 3L8 3L8 8L11 8L11 11L8 11L8 16L3 16L3 3Z" fill="white"/>
+        </svg>
+      </div>
+    </div>
   );
 }
