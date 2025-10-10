@@ -30,11 +30,11 @@ export default function CustomCursor() {
       <div 
         className="absolute"
         style={{
-          transform: 'translate(1.5px, 1.5px)',
+          transform: 'translate(2px, 2px)',
         }}
       >
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-          <path d="M3 2L3 13L6.5 9.5L9 9.5L11 15L12.5 14.5L10.5 9L14 9L3 2Z" fill="#00ff00" opacity="0.5"/>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M5 3L5 17L9 13L12 13L15 21L17 20L14 12L19 12L5 3Z" fill="#00ff00" opacity="0.6"/>
         </svg>
       </div>
       
@@ -42,42 +42,42 @@ export default function CustomCursor() {
       <div 
         className="absolute"
         style={{
-          transform: 'translate(-1.5px, -0.5px)',
+          transform: 'translate(-2px, -1px)',
         }}
       >
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-          <path d="M3 2L3 13L6.5 9.5L9 9.5L11 15L12.5 14.5L10.5 9L14 9L3 2Z" fill="#00ff41" opacity="0.85"/>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M5 3L5 17L9 13L12 13L15 21L17 20L14 12L19 12L5 3Z" fill="#00ff41" opacity="0.8"/>
         </svg>
       </div>
       
-      {/* Lime green glitch - right offset */}
+      {/* Lime green glitch - slight offset */}
       <div 
         className="absolute"
         style={{
-          transform: 'translate(1px, 0.5px)',
+          transform: 'translate(1px, 1px)',
         }}
       >
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-          <path d="M3 2L3 13L6.5 9.5L9 9.5L11 15L12.5 14.5L10.5 9L14 9L3 2Z" fill="#39ff14" opacity="0.75"/>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M5 3L5 17L9 13L12 13L15 21L17 20L14 12L19 12L5 3Z" fill="#39ff14" opacity="0.7"/>
         </svg>
       </div>
       
-      {/* Main cursor */}
+      {/* Main white cursor with green tint */}
       <div className="absolute">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-          <path d="M3 2L3 13L6.5 9.5L9 9.5L11 15L12.5 14.5L10.5 9L14 9L3 2Z" fill="white" stroke="#00ff41" strokeWidth="0.4"/>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M5 3L5 17L9 13L12 13L15 21L17 20L14 12L19 12L5 3Z" fill="white" stroke="#00ff41" strokeWidth="0.5"/>
         </svg>
       </div>
       
-      {/* Glow effect */}
+      {/* Subtle glow effect */}
       <div 
         className="absolute"
         style={{
-          filter: 'blur(2px)',
+          filter: 'blur(3px)',
         }}
       >
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-          <path d="M3 2L3 13L6.5 9.5L9 9.5L11 15L12.5 14.5L10.5 9L14 9L3 2Z" fill="#00ff41" opacity="0.35"/>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M5 3L5 17L9 13L12 13L15 21L17 20L14 12L19 12L5 3Z" fill="#00ff41" opacity="0.4"/>
         </svg>
       </div>
     </div>
