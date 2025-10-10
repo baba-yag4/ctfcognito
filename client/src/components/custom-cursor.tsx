@@ -18,12 +18,12 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Outer ring with crosshair design */}
+      {/* Compact crosshair ring */}
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9999] hidden md:block"
         animate={{
-          x: mousePosition.x - 20,
-          y: mousePosition.y - 20,
+          x: mousePosition.x - 10,
+          y: mousePosition.y - 10,
         }}
         transition={{
           type: "tween",
@@ -31,28 +31,24 @@ export default function CustomCursor() {
           duration: 0.05,
         }}
       >
-        <div className="relative w-10 h-10">
-          {/* Outer cyan ring */}
-          <div className="absolute inset-0 border-2 border-cyan-400/70 rounded-full"></div>
+        <div className="relative w-5 h-5">
+          {/* Outer ring */}
+          <div className="absolute inset-0 border border-cyan-400/80 rounded-full"></div>
           
-          {/* Crosshair lines */}
-          <div className="absolute top-1/2 left-0 w-full h-[2px] bg-cyan-400/50 -translate-y-1/2"></div>
-          <div className="absolute left-1/2 top-0 h-full w-[2px] bg-cyan-400/50 -translate-x-1/2"></div>
-          
-          {/* Corner brackets for cyber aesthetic */}
-          <div className="absolute top-0 left-0 w-2 h-2 border-l-2 border-t-2 border-cyan-400"></div>
-          <div className="absolute top-0 right-0 w-2 h-2 border-r-2 border-t-2 border-cyan-400"></div>
-          <div className="absolute bottom-0 left-0 w-2 h-2 border-l-2 border-b-2 border-cyan-400"></div>
-          <div className="absolute bottom-0 right-0 w-2 h-2 border-r-2 border-b-2 border-cyan-400"></div>
+          {/* Small corner brackets */}
+          <div className="absolute -top-[1px] -left-[1px] w-1.5 h-1.5 border-l border-t border-cyan-400"></div>
+          <div className="absolute -top-[1px] -right-[1px] w-1.5 h-1.5 border-r border-t border-cyan-400"></div>
+          <div className="absolute -bottom-[1px] -left-[1px] w-1.5 h-1.5 border-l border-b border-cyan-400"></div>
+          <div className="absolute -bottom-[1px] -right-[1px] w-1.5 h-1.5 border-r border-b border-cyan-400"></div>
         </div>
       </motion.div>
 
       {/* Center dot */}
       <motion.div
-        className="fixed top-0 left-0 w-2 h-2 bg-cyan-400 rounded-full pointer-events-none z-[9999] hidden md:block shadow-[0_0_10px_rgba(34,211,238,0.8)]"
+        className="fixed top-0 left-0 w-1.5 h-1.5 bg-cyan-400 rounded-full pointer-events-none z-[9999] hidden md:block shadow-[0_0_8px_rgba(34,211,238,0.6)]"
         animate={{
-          x: mousePosition.x - 4,
-          y: mousePosition.y - 4,
+          x: mousePosition.x - 3,
+          y: mousePosition.y - 3,
         }}
         transition={{
           type: "tween",
