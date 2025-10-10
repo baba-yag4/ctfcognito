@@ -10,8 +10,8 @@ const fadeInUp = {
 };
 
 export default function VenueMap() {
-  const venueLocation = "Royal College of Engineering and Technology, Akkikavu, Thrissur, Kerala 680501";
-  const mapsUrl = "https://www.google.com/maps/place/Royal+College+of+Engineering+and+Technology/@10.5274,76.2164,17z";
+  const venueLocation = "Royal College of Engineering & Technology, Chiramanangad P.O, Akkikavu Rd, Thrissur, Kerala 680604";
+  const mapsUrl = "https://maps.app.goo.gl/eQKFzAVjAGasjrn87";
 
   return (
     <motion.div
@@ -28,7 +28,7 @@ export default function VenueMap() {
         <div className="space-y-4">
           <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden border border-border">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2704839484395!2d76.21392731478443!3d10.527433892531982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7eeb3c0000001%3A0x4e3c0f8e7f8e7f8e!2sRoyal%20College%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.3486771234567!2d76.1032991!3d10.6906572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7c06ae727fb23%3A0xef071dcef7bf35f5!2sRoyal%20College%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
