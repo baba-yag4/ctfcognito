@@ -23,11 +23,11 @@ const faqs = [
   },
   {
     question: "What should I bring to the event?",
-    answer: "Bring your laptop with a working battery, charger, and any tools you prefer. Ensure you have a stable internet connection capability. Also bring a valid ID proof for registration."
+    answer: "Bring your laptop with a working battery, charger, and any tools you prefer. If you don't have a laptop no worries! We will provide one. Ensure you have a stable internet connection capability. Also bring a valid ID proof for registration."
   },
   {
     question: "Is there an entry fee?",
-    answer: "Pre-registration costs ₹100 per person, while spot registration is ₹150 per person. Payment details will be provided after form submission."
+    answer: "Pre-registration costs ₹75/- per person, while spot registration is ₹80/- per person. Payment details will be provided during form submission."
   },
   {
     question: "What are the prizes?",
