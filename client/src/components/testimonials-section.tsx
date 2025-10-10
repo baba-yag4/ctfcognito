@@ -4,19 +4,19 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Arjun K",
+    name: "Akshay",
     role: "Previous Participant",
     content: "CTF Cognito was an amazing experience! The challenges were well-crafted and really tested my skills. Learned so much about web exploitation and cryptography.",
     rating: 5
   },
   {
-    name: "Priya M",
+    name: "Adharsh",
     role: "Cybersecurity Student",
     content: "As a beginner, I was nervous, but the organizers were super helpful. The OSINT challenges were my favorite. Definitely recommend this event!",
     rating: 5
   },
   {
-    name: "Rahul S",
+    name: "Vighnesh",
     role: "Bug Bounty Hunter",
     content: "Great competition with diverse challenges. The forensics section was particularly challenging. Well organized and great prizes too!",
     rating: 5
