@@ -3,9 +3,19 @@ import { motion } from "framer-motion";
 import Navigation from "@/components/navigation";
 import AnimatedBackground from "@/components/animated-background";
 import FloatingParticles from "@/components/floating-particles";
+import MatrixRain from "@/components/matrix-rain";
+import CustomCursor from "@/components/custom-cursor";
 import CountdownTimer from "@/components/countdown-timer";
 import ModernText from "@/components/modern-text";
 import CyberCard from "@/components/cyber-card";
+import AnimatedCounter from "@/components/animated-counter";
+import FAQSection from "@/components/faq-section";
+import TestimonialsSection from "@/components/testimonials-section";
+import VenueMap from "@/components/venue-map";
+import EventTimeline from "@/components/event-timeline";
+import NewsletterSignup from "@/components/newsletter-signup";
+import ParticipantCounter from "@/components/participant-counter";
+import ChallengePreview from "@/components/challenge-preview";
 import { Button } from "@/components/ui/button";
 import { 
   Calendar, 
@@ -61,7 +71,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <AnimatedBackground />
+      <MatrixRain />
       <FloatingParticles />
+      <CustomCursor />
       <Navigation />
 
       {/* Hero Section */}
@@ -191,7 +203,7 @@ export default function Home() {
                     <div className="border-t border-border/50"></div>
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Results</span>
-                      <span className="text-foreground font-medium">4:30 PM - 5:00 PM</span>
+                      <span className="text-foreground font-medium">4:00 PM - 4:30 PM</span>
                     </div>
                   </div>
                   
@@ -208,11 +220,15 @@ export default function Home() {
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-lg">1st Place</span>
-                    <span className="text-xl font-bold text-secondary">₹5,000</span>
+                    <span className="text-xl font-bold text-secondary">
+                      ₹<AnimatedCounter end={5000} />
+                    </span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-lg">2nd Place</span>
-                    <span className="text-xl font-bold text-accent">₹3,000</span>
+                    <span className="text-xl font-bold text-accent">
+                      ₹<AnimatedCounter end={3000} />
+                    </span>
                   </div>
                   <p className="text-sm text-muted-foreground mt-4">+ Certificates for all participants</p>
                 </div>
@@ -577,6 +593,31 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Participant Counter Stats */}
+      <ParticipantCounter />
+
+      {/* Challenge Preview Section */}
+      <ChallengePreview />
+
+      {/* Event Timeline & Venue Map Side by Side */}
+      <section className="section-padding relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <EventTimeline />
+            <VenueMap />
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
+
+      {/* Newsletter Signup */}
+      <NewsletterSignup />
 
       {/* Final CTA Section */}
       <section className="relative section-padding bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10">
