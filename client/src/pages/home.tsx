@@ -484,6 +484,13 @@ export default function Home() {
                         <a href="tel:+919037484202" className="text-muted-foreground hover:text-secondary transition-colors cursor-pointer">+91 9037484202</a>
                       </div>
                     </div>
+                    <div className="flex items-center space-x-4">
+                      <Phone className="text-secondary" />
+                      <div>
+                        <p className="font-semibold text-foreground">Suhail</p>
+                        <a href="tel:+917025642469" className="text-muted-foreground hover:text-secondary transition-colors cursor-pointer">+91 70256 42469</a>
+                      </div>
+                    </div>
                   </div>
                 </CyberCard>
               </motion.div>
