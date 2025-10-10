@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Home, Calendar, Info, Mail } from "lucide-react";
+import ThemeToggle from "@/components/theme-toggle";
 import cognitoTechfestLogo from "@assets/Untitled design_1759044466581.png";
 
 export default function Navigation() {
@@ -91,6 +92,7 @@ export default function Navigation() {
               <Mail className="w-4 h-4" />
               <span>Contact</span>
             </button>
+            <ThemeToggle />
           </div>
           
           <Button
