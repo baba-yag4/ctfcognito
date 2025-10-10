@@ -13,7 +13,6 @@ import FAQSection from "@/components/faq-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import VenueMap from "@/components/venue-map";
 import EventTimeline from "@/components/event-timeline";
-import SponsorsCarousel from "@/components/sponsors-carousel";
 import NewsletterSignup from "@/components/newsletter-signup";
 import ParticipantCounter from "@/components/participant-counter";
 import ChallengePreview from "@/components/challenge-preview";
@@ -620,9 +619,6 @@ export default function Home() {
 
       {/* FAQ Section */}
       <FAQSection />
-
-      {/* Sponsors Carousel */}
-      <SponsorsCarousel />
 
       {/* Newsletter Signup */}
       <NewsletterSignup />
