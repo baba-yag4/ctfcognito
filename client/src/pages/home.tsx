@@ -203,7 +203,7 @@ export default function Home() {
                     <div className="border-t border-border/50"></div>
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Results</span>
-                      <span className="text-foreground font-medium">4:30 PM - 5:00 PM</span>
+                      <span className="text-foreground font-medium">4:00 PM - 4:30 PM</span>
                     </div>
                   </div>
                   
