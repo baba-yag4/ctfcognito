@@ -13,7 +13,6 @@ import FAQSection from "@/components/faq-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import VenueMap from "@/components/venue-map";
 import EventTimeline from "@/components/event-timeline";
-import NewsletterSignup from "@/components/newsletter-signup";
 import ParticipantCounter from "@/components/participant-counter";
 import ChallengePreview from "@/components/challenge-preview";
 import { Button } from "@/components/ui/button";
@@ -615,9 +614,6 @@ export default function Home() {
 
       {/* FAQ Section */}
       <FAQSection />
-
-      {/* Newsletter Signup */}
-      <NewsletterSignup />
 
       {/* Final CTA Section */}
       <section className="relative section-padding bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10">
