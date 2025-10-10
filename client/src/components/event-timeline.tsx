@@ -15,8 +15,8 @@ const timelineEvents = [
   },
   {
     time: "10:00 AM - 12:00 PM",
-    title: "CTF Competition - Session 1",
-    description: "First phase - solve challenges and capture flags"
+    title: "CTF Competition",
+    description: "Solve challenges and capture flags"
   },
   {
     time: "12:00 PM - 1:00 PM",
@@ -25,8 +25,8 @@ const timelineEvents = [
   },
   {
     time: "1:00 PM - 4:00 PM",
-    title: "CTF Competition - Session 2",
-    description: "Continue competition phase"
+    title: "CTF Competition",
+    description: "Competition continues"
   },
   {
     time: "4:00 PM - 4:30 PM",
