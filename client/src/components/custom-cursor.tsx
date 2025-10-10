@@ -3,18 +3,10 @@ import { motion } from "framer-motion";
 
 export default function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isPointer, setIsPointer] = useState(false);
 
   useEffect(() => {
     const updateMousePosition = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
-      
-      const target = e.target as HTMLElement;
-      setIsPointer(
-        window.getComputedStyle(target).cursor === "pointer" ||
-        target.tagName === "BUTTON" ||
-        target.tagName === "A"
-      );
     };
 
     window.addEventListener("mousemove", updateMousePosition);
@@ -25,34 +17,17 @@ export default function CustomCursor() {
   }, []);
 
   return (
-    <>
-      <motion.div
-        className="fixed top-0 left-0 w-8 h-8 border-2 border-primary rounded-full pointer-events-none z-[9999] mix-blend-difference hidden md:block"
-        animate={{
-          x: mousePosition.x - 16,
-          y: mousePosition.y - 16,
-          scale: isPointer ? 1.5 : 1,
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 1500,
-          damping: 40,
-          mass: 0.5,
-        }}
-      />
-      <motion.div
-        className="fixed top-0 left-0 w-1 h-1 bg-secondary rounded-full pointer-events-none z-[9999] hidden md:block"
-        animate={{
-          x: mousePosition.x - 2,
-          y: mousePosition.y - 2,
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 2000,
-          damping: 45,
-          mass: 0.3,
-        }}
-      />
-    </>
+    <motion.div
+      className="fixed top-0 left-0 w-6 h-6 bg-primary/40 rounded-full pointer-events-none z-[9999] hidden md:block"
+      animate={{
+        x: mousePosition.x - 12,
+        y: mousePosition.y - 12,
+      }}
+      transition={{
+        type: "tween",
+        ease: "linear",
+        duration: 0.05,
+      }}
+    />
   );
 }

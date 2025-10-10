@@ -16,7 +16,6 @@ import EventTimeline from "@/components/event-timeline";
 import NewsletterSignup from "@/components/newsletter-signup";
 import ParticipantCounter from "@/components/participant-counter";
 import ChallengePreview from "@/components/challenge-preview";
-import PastEventsGallery from "@/components/past-events-gallery";
 import { Button } from "@/components/ui/button";
 import { 
   Calendar, 
@@ -613,9 +612,6 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <TestimonialsSection />
-
-      {/* Past Events Gallery */}
-      <PastEventsGallery />
 
       {/* FAQ Section */}
       <FAQSection />
