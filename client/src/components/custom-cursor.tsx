@@ -19,26 +19,14 @@ export default function CustomCursor() {
 
   return (
     <div 
-      className="fixed pointer-events-none z-[9999] hidden md:block mix-blend-screen"
+      className="fixed pointer-events-none z-[9999] hidden md:block"
       style={{
         left: `${mousePosition.x}px`,
         top: `${mousePosition.y}px`,
         transform: 'translate(0, 0)',
       }}
     >
-      {/* Cyan glitch layer - offset left */}
-      <div 
-        className="absolute"
-        style={{
-          transform: 'translate(-2px, -2px)',
-        }}
-      >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M3 3L8 3L8 8L11 8L11 11L8 11L8 16L3 16L3 3Z" fill="#00ffff" opacity="0.8"/>
-        </svg>
-      </div>
-      
-      {/* Magenta glitch layer - offset right */}
+      {/* Dark green glitch layer - offset down-right */}
       <div 
         className="absolute"
         style={{
@@ -46,14 +34,50 @@ export default function CustomCursor() {
         }}
       >
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M3 3L8 3L8 8L11 8L11 11L8 11L8 16L3 16L3 3Z" fill="#ff00ff" opacity="0.8"/>
+          <path d="M5 3L5 17L9 13L12 13L15 21L17 20L14 12L19 12L5 3Z" fill="#00ff00" opacity="0.6"/>
         </svg>
       </div>
       
-      {/* White center layer */}
+      {/* Bright green glitch layer - offset left */}
+      <div 
+        className="absolute"
+        style={{
+          transform: 'translate(-2px, -1px)',
+        }}
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M5 3L5 17L9 13L12 13L15 21L17 20L14 12L19 12L5 3Z" fill="#00ff41" opacity="0.8"/>
+        </svg>
+      </div>
+      
+      {/* Lime green glitch layer - slight offset */}
+      <div 
+        className="absolute"
+        style={{
+          transform: 'translate(1px, 1px)',
+        }}
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M5 3L5 17L9 13L12 13L15 21L17 20L14 12L19 12L5 3Z" fill="#39ff14" opacity="0.7"/>
+        </svg>
+      </div>
+      
+      {/* Main white cursor with green tint */}
       <div className="absolute">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M3 3L8 3L8 8L11 8L11 11L8 11L8 16L3 16L3 3Z" fill="white"/>
+          <path d="M5 3L5 17L9 13L12 13L15 21L17 20L14 12L19 12L5 3Z" fill="white" stroke="#00ff41" strokeWidth="0.5"/>
+        </svg>
+      </div>
+      
+      {/* Subtle glow effect */}
+      <div 
+        className="absolute"
+        style={{
+          filter: 'blur(3px)',
+        }}
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M5 3L5 17L9 13L12 13L15 21L17 20L14 12L19 12L5 3Z" fill="#00ff41" opacity="0.4"/>
         </svg>
       </div>
     </div>
